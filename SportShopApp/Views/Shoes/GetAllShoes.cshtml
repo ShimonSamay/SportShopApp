@@ -1,0 +1,21 @@
+﻿@using SportShopApp.Models;
+<link href="@Url.Content("~/Content/Shoes.css")" rel="stylesheet" type="text/css" />
+
+<div class="Cards-Container">
+
+    @foreach (Shoe shoe in Model)
+    {
+
+        <div class="Cards">
+
+            <img class="ShoesPics" src="@shoe.PickLink" />
+            <p>
+                @shoe.Company  @shoe.Model <br /> @shoe.Price$
+
+            </p>
+
+        </div>
+
+    }
+    <a class="Links" href="@Url.Action("GetShoesOnSale","Shoes")">Check Shoes On Sale !</a>
+</div>
