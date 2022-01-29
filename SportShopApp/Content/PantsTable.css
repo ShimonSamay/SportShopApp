@@ -1,12 +1,12 @@
 ﻿* {
-    padding : 0 ;
-    margin : 0 ;
-    box-sizing : border-box ;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.shoesTable {
-    margin-top: 8vh;
-    margin-left: 16vw;
+.pants-table {
+    margin-top: 10vh;
+    margin-left: 15vw;
     max-width: 100%;
     text-align: center;
     border-collapse: collapse;
@@ -16,22 +16,21 @@
 }
 
 th {
-    background-color : grey ;
+    background-color: grey;
     color: black;
     border-bottom: 2px solid black;
     text-align: center;
-    font-size : 15px ;
-    padding : 20px 20px 20px ;
+    font-size: 15px;
+    padding: 20px 20px 20px;
 }
 
 tr {
     text-align: center;
     height: 5vh;
     border-radius: 5px;
-    padding : 50px ;
+    padding: 50px;
 }
 
 td {
-    padding : 20px ;
+    padding: 20px;
 }
-

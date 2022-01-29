@@ -16,27 +16,33 @@ namespace SportShopApp.Controllers
         {
             return View(DataContext.Clothings.Where(clothe => clothe.ClothingType == "Pants").ToList());
         }
+
+
         public ActionResult GetAllPants()
         {
             return View(DataContext.Clothings.Where(clothe => clothe.ClothingType == "Pants").ToList());
         }
+
 
         public ActionResult GetLongPants()
         {
             return View(DataContext.Clothings.Where(clothe => clothe.ClothingType == "Pants" && clothe.IsShort == false).ToList());
         }
 
+
         public ActionResult GetShorts()
         {
             return View(DataContext.Clothings.Where(clothe => clothe.ClothingType == "Pants" && clothe.IsShort == true).ToList());
         }
+
 
         public ActionResult GetDryFit ()
         {
             return View(DataContext.Clothings.Where(clothe => clothe.ClothingType == "Pants" && clothe.IsDryFit == true).ToList());
         }
 
-        public ActionResult OrdrerByPrice()
+
+        public ActionResult OrderByPrice()
         {
             return View(DataContext.Clothings.Where(clothe => clothe.ClothingType == "Pants").OrderBy(clothe => clothe.Price).ToList());
         }

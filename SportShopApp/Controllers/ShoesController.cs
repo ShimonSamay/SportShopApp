@@ -11,15 +11,18 @@ namespace SportShopApp.Controllers
     {
         static string stringConnection = "Data Source=SHIMONSAMAY;Initial Catalog=SportShopDB;Integrated Security=True;Pooling=False";
         public SportShoesDBDataContext DataContext = new SportShoesDBDataContext(stringConnection);
+
         public ActionResult GetAllShoes()
         {
             return View(DataContext.Shoes.ToList());
         }
 
+
         public ActionResult GetShoesOnSale()
         {
             return View(DataContext.Shoes.Where(shoe => shoe.OnSale == true).ToList());
         }
+
 
         public ActionResult ShoesTable ()
         {

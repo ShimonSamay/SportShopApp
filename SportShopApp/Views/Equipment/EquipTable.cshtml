@@ -1,0 +1,36 @@
+﻿@using SportShopApp.Models;
+<link rel="stylesheet" href="~/Content/EquipmentTable.css" />
+
+<table class="eqip-Table">
+    <tr>
+        <th>Id</th>
+        <th>Sport Type</th>
+        <th>Product</th>
+        <th>Company</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>TeamId</th>
+    </tr>
+    @foreach (Equipment equip in Model)
+    {
+        <tr>
+            <td>@equip.Id</td>
+            <td>@equip.SportType</td>
+            <td>@equip.Product</td>
+            <td>@equip.Company</td>
+            <td>@equip.Price</td>
+            <td>@equip.Quantity</td>
+            @if (equip.TeamId == null)
+            {
+                <td>Not have</td>
+            }
+            @if (equip.TeamId != null)
+            {
+                <td>@equip.Id</td>
+            }
+
+        </tr>
+
+    }
+
+</table>

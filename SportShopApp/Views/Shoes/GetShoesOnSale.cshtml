@@ -1,5 +1,10 @@
 ﻿@using SportShopApp.Models;
-<link href="@Url.Content("~/Content/Shoes.css")" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="~/Content/ShoesOnSale.css" />
+
+<div class="MyLinksto">
+    <button class="btnsLinks" onclick="location.href = '@Url.Action("GetAllShoes" , "Shoes")'">Back to Shoes</button>
+    <button class="btnsLinks" onclick="location.href = '@Url.Action("ShoesTable" , "Shoes")'">Manager View</button>
+</div>
 
 @{
 Random Discount = new Random();
@@ -7,22 +12,21 @@ Random Discount = new Random();
 
 <div class="Cards-Container">
 
-
     @foreach (Shoe shoe in Model)
-    {
+  {
+       <div class="Cards">
 
-        <div class="Cards">
+          <img class="ShoesPics" src="@shoe.PickLink" />
+          <div class="DropDown">
+             <p>
 
-            <img class="ShoesPics" src="@shoe.PickLink" />
-            <p>
-                @shoe.Company  @shoe.Model <br />  
+                @shoe.Company  @shoe.Model <br />
                 @shoe.Price$<br />
-                Discount: @Discount.Next(5,40)%
+                Discount : @Discount.Next(10, 35)%
 
-            </p>
+             </p>
+         </div>
 
         </div>
-
-    }
-    <a href="@Url.Action("GetAllShoes","Shoes")">Back To All Shoes</a>
+   }
 </div>

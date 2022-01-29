@@ -1,0 +1,45 @@
+﻿@using SportShopApp.Models;
+<link rel="stylesheet" href="~/Content/ShirtsTable.css" />
+
+<table>
+
+    <tr>
+        <th>ShirtId</th>
+        <th>Gender</th>
+        <th>Company</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Is Short</th>
+        <th>Is DryFit</th>
+
+    </tr>
+    @foreach (Clothing clothe in Model)
+    {
+        <tr>
+            <td>@clothe.Id</td>
+            <td>@clothe.Gender</td>
+            <td>@clothe.Company</td>
+            <td>@clothe.Price$</td>
+            <td>@clothe.Quantity</td>
+            @if (clothe.IsShort == true)
+            {
+                <td>Yes</td>
+            }
+            @if (clothe.IsShort == false)
+            {
+                <td>No</td>
+            }
+            @if (clothe.IsDryFit == true)
+            {
+                <td>Yes</td>
+            }
+            @if (clothe.IsDryFit == false)
+            {
+                <td>No</td>
+            }
+
+
+        </tr>
+    }
+
+</table>

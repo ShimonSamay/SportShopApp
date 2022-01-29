@@ -1,0 +1,28 @@
+﻿@using SportShopApp.Models;
+<link rel="stylesheet" href="~/Content/Equipment.css" />
+
+<div class="MyLinksto">
+    <button class="btnsLinks" onclick="location.href = '@Url.Action("GetAllEquip" , "Equipment")'">All Products</button>
+    <button class="btnsLinks" onclick="location.href = '@Url.Action("GetFootballItems" , "Equipment")'">Football Products</button>
+    <button class="btnsLinks" onclick="location.href = '@Url.Action("GetBasketballItems" , "Equipment")'">Basketball Products</button>
+</div>
+
+<section class="Cards-Container">
+
+    @foreach (Equipment equip in Model)
+    {
+
+        <article class="Cards">
+
+            <img class="EquipPics" src="@equip.PickLink" />
+
+            <div class="DropDown">
+                <p>
+                    @equip.SportType ,  @equip.Company <br /> @equip.Price$
+                </p>
+
+            </div>
+
+        </article>
+    }
+</section>

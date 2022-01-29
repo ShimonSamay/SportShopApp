@@ -1,21 +1,31 @@
 ﻿@using SportShopApp.Models;
-<link href="@Url.Content("~/Content/Shoes.css")" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="~/Content/Shoes.css" />
 
-<div class="Cards-Container">
+<div class="MyLinksto">
+        <button class="btnsLinks" onclick="location.href = '@Url.Action("GetShoesOnSale" , "Shoes")'">Shoes on sale</button>
+        <button class="btnsLinks" onclick="location.href = '@Url.Action("ShoesTable" , "Shoes")'">Manager View</button>
+</div>
+
+
+<section class="Cards-Container">
 
     @foreach (Shoe shoe in Model)
     {
 
-        <div class="Cards">
+        <article class="Cards">
 
             <img class="ShoesPics" src="@shoe.PickLink" />
-            <p>
-                @shoe.Company  @shoe.Model <br /> @shoe.Price$
 
-            </p>
+            <div class="DropDown">
+                <p>
+                    @shoe.Company  @shoe.Model <br /> @shoe.Price$
+                </p>
 
-        </div>
+            </div>
+
+        </article>
 
     }
-    <a class="Links" href="@Url.Action("GetShoesOnSale","Shoes")">Check Shoes On Sale !</a>
-</div>
+
+</section>
+

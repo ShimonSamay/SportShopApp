@@ -14,5 +14,24 @@
         <elementListCompartment Id="dfc9d964-c00f-4ac6-8966-d1143f54c4c2" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="954733c9-e9ee-4b12-afaf-4bb32082e6ef" absoluteBounds="0.5, 3.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SportShoesDBDataContext/Equipment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="43ff91aa-b719-4f4c-a89c-dbbe669b3de5" absoluteBounds="0.51499999999999968, 3.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="84d23ad0-59c4-42ad-8714-946ac4a3fcb9" absoluteBounds="2.875, 3.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SportShoesDBDataContext/Team" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51a191f7-1533-4f07-88ec-7403ba210902" absoluteBounds="2.89, 3.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 3.84699625651042); (2.5 : 3.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SportShoesDBDataContext/Team/Team_Equipment" />
+      <nodes>
+        <classShapeMoniker Id="84d23ad0-59c4-42ad-8714-946ac4a3fcb9" />
+        <classShapeMoniker Id="954733c9-e9ee-4b12-afaf-4bb32082e6ef" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

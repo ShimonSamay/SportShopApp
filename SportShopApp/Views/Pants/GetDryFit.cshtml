@@ -1,0 +1,32 @@
+﻿@using SportShopApp.Models;
+<link rel="stylesheet" href="~/Content/Pants.css"/>
+
+<div class="MyLinksto">
+    <button class="btnsLinks" onclick="location.href = '@Url.Action("GetAllPants" , "Pants")'">All Products</button>
+    <button class="btnsLinks" onclick="location.href = '@Url.Action("GetLongPants" , "Pants")'">Trousers</button>
+    <button class="btnsLinks" onclick="location.href = '@Url.Action("GetShorts" , "Pants")'">Shorts</button>
+    <button class="btnsLinks" onclick="location.href = '@Url.Action("OrderByPrice" , "Pants")'">Order By Price</button>
+</div>
+
+
+<section class="Cards-Container">
+
+    @foreach (Clothing pants in Model)
+    {
+
+        <article class="Cards">
+
+            <img class="PantsPics" src="@pants.PickLink" />
+
+            <div class="DropDown">
+                <p>
+                    @pants.Company <br /> @pants.Price$
+                </p>
+
+            </div>
+
+        </article>
+
+    }
+
+</section>

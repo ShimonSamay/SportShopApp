@@ -1,28 +1,27 @@
 ﻿@using SportShopApp.Models;
-<link href="@Url.Content("~/Content/ShoesTable.css")" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="~/Content/ShoesTable.css" />
 
-<table>
+<table class="shoesTable">
+
     <tr>
         <th>Id</th>
-        <th>Shoes Type</th>
+        <th>Shoe Type</th>
         <th>Company</th>
         <th>Model</th>
         <th>Price</th>
         <th>Quantity</th>
-        <th>On-Sale</th>
     </tr>
-    @foreach(Shoe shoe in Model)
-            {
-               <tr>
-                   <td>@shoe.Id</td>
-                   <td>@shoe.ShoeType</td>
-                   <td>@shoe.Company</td>
-                   <td>@shoe.Model</td>
-                   <td>@shoe.Price$</td>
-                   <td>@shoe.Quantity</td>
-                   <td>@shoe.OnSale</td>
-               </tr>
-               
-            }
+    @foreach (Shoe shoe in Model)
+    {
+        <tr>
+            <td>@shoe.Id</td>
+            <td>@shoe.ShoeType</td>
+            <td>@shoe.Company</td>
+            <td>@shoe.Model</td>
+            <td>@shoe.Price$</td>
+            <td>@shoe.Quantity</td>
+        </tr>
+
+    }
 
 </table>
